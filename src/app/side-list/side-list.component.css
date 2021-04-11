@@ -1,0 +1,44 @@
+:host ::ng-deep .mat-radio-outer-circle{
+    border-style: none;
+    opacity: 0.5;
+  }
+  
+  .flex-container > mat-radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-container {
+      background-color: rgb(58, 186, 209);
+      position: absolute;
+      right: 10px;
+      height: 100%;
+      width: 23%;
+      border-style: solid;
+      border-color: white;
+      border-top-left-radius: 25px;
+      margin-top: 40px;
+      color: white;
+    }
+    mat-radio-group {
+        margin-top: 80px;
+        margin-left: 40px;
+    }
+    .tri {
+     position: absolute;
+     top: 35px; 
+     left: 40px; 
+
+    }
+    .etats {
+        position: absolute;
+        top: 65px;
+    }
+    .filtre {
+        position: absolute;
+        top: 230px; 
+        left: 40px; 
+    }
+    .etat-bottom {
+        position: absolute;
+        bottom: 250px;
+    }

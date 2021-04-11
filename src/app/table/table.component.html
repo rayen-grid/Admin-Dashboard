@@ -1,0 +1,53 @@
+
+<div class="tab"> 
+<!-- search bar --> 
+
+<p-table #tablesearch [value]="products"[globalFilterFields]="['name']">
+    
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex">
+        <h4 ><i class="pi pi-folder
+            " style="font-size: 2rem;"  ></i><b>
+Dossiers</b></h4>
+
+            <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(tablesearch)"></button> -->
+            <span class="p-input-icon-left p-ml-auto">
+                <i class="pi pi-search fa-fw" style="color: white;"></i>
+                <input pInputText type="text"
+                 (input)="tablesearch.filterGlobal($event.target.value, 'contains')" placeholder="Recherche"
+                  id="search-box"/>
+            </span>
+        </div>
+    </ng-template> 
+
+    
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="name" style="color: rgb(58, 186, 209);
+            ">Nom <p-sortIcon field="name"></p-sortIcon></th>
+            <th style="color: rgb(58, 186, 209);
+            ">Identifiant</th>
+            <th style="color: rgb(58, 186, 209);
+            ">Date du sinistre </th>
+            <th  style="color: rgb(58, 186, 209);
+            ">Num du dossier</th>
+            <th pSortableColumn="etat_dossier" style="color: rgb(58, 186, 209);
+            " >Etat du dossier <p-sortIcon field="etat_dossier"></p-sortIcon></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr (click)="getUserData()" class="tableRow">
+            <td><p-avatar image="assets/user.png" shape="circle" id="client-img">
+            </p-avatar>        {{product.name}}</td>
+            <td>{{product.id}}</td>
+            <td>{{product.date_sin}}</td>
+            <td>{{product.num_dossier}}</td>
+            <td style="white-space: nowrap;">
+                {{product.etat_dossier}}</td>
+<td><i class="fa fa-phone-square fa-2x"></i></td>
+        </tr>
+    </ng-template>
+</p-table>
+<p-paginator [rows]="10" [totalRecords]="120" ></p-paginator>
+</div>

@@ -1,0 +1,62 @@
+.tab {
+    width: 60%;
+    position:absolute;
+    margin-left: 10%;
+    margin-top:10%;
+}
+
+.tableRow {
+    cursor: pointer;
+}
+
+h4 {
+    /* border:solid 1px;
+    border-style: hidden; */
+background-image: linear-gradient(to right, rgb(246, 253, 252), rgb(246, 248, 247)); 
+color: rgb(58, 186, 209);
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.p-input-icon-left,
+.p-input-icon-right {
+    float: right;
+    bottom: 40px;
+  
+
+}
+span.p-input-icon-left input[type="text"] {
+    padding: 0px 25px;
+    border:hidden 0px;
+    border-color: white;
+    background-color: rgba(128, 128, 128, 0.89);
+    color: white;
+    border-radius: 3px;
+    height: 30px;
+}
+tr > td {
+    text-align:center;
+    line-height: 10px; 
+    font-size: 12px;
+    font-weight: 500;
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+    text-indent: 6px;
+}
+#search-box:focus{
+    outline:none;
+  }
+/* #client-img {
+    vertical-align: middle;
+} */
+td > * {
+    vertical-align : middle;
+}
+tr {
+    white-space: nowrap;
+}
+
+tr > th {
+    background-color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,6 @@
+<svg id="Messages" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="_Icon" data-name="🔣 Icon">
+    <path id="Shape" d="M0,0H36V36H0Z" fill="none"/>
+    <path id="Color" d="M30,28.5l0,0-6-5.7H7.5A1.466,1.466,0,0,1,6,21.375V18.524H25.5V5.7h3A1.466,1.466,0,0,1,30,7.126V28.5ZM0,21.375V1.425A1.465,1.465,0,0,1,1.5,0H21a1.465,1.465,0,0,1,1.5,1.425V14.25A1.465,1.465,0,0,1,21,15.675H6l-6,5.7Z" transform="translate(3 3)" fill="rgba(255,255,255,0.62)"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+      <span class='logo'></span>
+
+    <mat-nav-list class="list">
+      <a mat-list-item href="#"><i class="fa fa-home fa-2x"></i></a>
+
+      <a mat-list-item href="#"><i class="fa fa-comments fa-2x"></i></a>
+      <a mat-list-item href="#"><i class="fa fa-credit-card fa-2x"></i></a>
+      <a mat-list-item href="#"><i class="fa fa-cog fa-2x"></i></a>
+      
+
+    </mat-nav-list>
+  <app-user></app-user>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+    <mat-toolbar >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+<!-- <nav class="navbar">
+	<a href="#">Home</a>
+	<a href="#">About</a>
+	<a routerLink="/login">Login</a>
+	<a href="#">Contact</a>
+  <div class="animation start-home"></div>
+</nav> -->
+    </mat-toolbar>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<nav class="nav-title">Dashboard Agent de Saisie</nav>
+
+  <h3>Bienvenue <span style="color: rgb(58, 186, 209);
+    ">Jihed</span></h3>
