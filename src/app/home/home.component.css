@@ -6,13 +6,12 @@ height: 10%;
   width: 75px;
   box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
   padding:  0px;
-  background-image: linear-gradient(to top, rgb(107, 227, 248), rgb(58, 186, 209));
-  
+background-color: #3184FC;  
   
 }
 
 .sidenav .mat-toolbar {
-  background-image: linear-gradient(to left, rgba(178, 241, 238, 0.842), rgb(14, 81, 158));
+  background-color: #3184FC;
 }
 
 /* .mat-toolbar.mat-primary {
@@ -80,7 +79,7 @@ h3 {
 }
 .nav-title {
   font-weight: bold;
-  color: rgb(58, 186, 209);
+  color: #3184FC;
   /* line-height: 20%; */
   position:absolute;
    left:125px; 
@@ -90,10 +89,10 @@ h3 {
 /* .fa { border: none; } */
 .list {
 position: absolute;
-top: 60px;
+top: 100px;
 opacity: 0.8;
 }
-.fa-home {
+/* .fa-home {
   color: white;
   position: absolute;
   top:20px;
@@ -121,11 +120,21 @@ opacity: 0.8;
   position: absolute;
   top: 25px;
   left: 23px;
-}
-.fa-cog:hover {
+} */
+/* .fa-cog:hover {
   opacity: 1;
   color: rgb(203, 219, 221);
-}
+} */
 /* a:active {
   color:white;
 } */
+.top-logo {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+a:hover {
+opacity: 0.4;
+}

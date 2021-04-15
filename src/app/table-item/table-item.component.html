@@ -1,1 +1,35 @@
-sqdd
+<div class="flex-container">
+  <div class="user-top">
+    <tr>
+    <td>
+    <p-avatar image="assets/user.png" shape="circle" id="client-img" size = "large">
+     
+  </p-avatar></td>
+  <td class="user-name">  <h4>Lisa Vroom</h4></td>
+  <td id="userIcon"><i class="fa fa-phone-square fa-2x"></i></td>
+
+  </tr>
+  <tr>
+    <td style="font-size: 10px; opacity: 0.8;">NOMBRE DE DOSSIERS</td>
+  </tr>
+  <tr>
+    <td style="font-weight: 400; font-size: 20px;">3</td>
+  </tr>
+</div>
+  <table mdbTable>
+    <!-- <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead> -->
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements" class="fline" >
+        <td (click)="getUserData()" class="fline" >
+          <img src="../../assets/clipboard.svg" class="folder">{{el.first}}
+          <i class="fa fa-chevron-right"></i>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>

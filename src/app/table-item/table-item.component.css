@@ -1,18 +1,66 @@
-:host ::ng-deep .p-button {
-    margin: 0 .5rem 0 0;
-    min-width: 10rem;
+
+.flex-container {
+  background-color: #3184FC;
+  position: absolute;
+  right: 10px;
+  height: 100% ;
+  width: 23%;
+  border-style: 0;
+  border-color: white;
+  border-top-left-radius: 25px;
+  margin-top: 40px;
+  color: white;
+}
+table {
+  color:white;
+}
+.user-top {
+  margin: 20px;
+   padding: 20px;
+   margin-left: 10px;
+   margin-top: 10px;
+}
+tr > * {
+  vertical-align : middle;
+border: none;
+
+}
+.user-name {
+padding : 12px;
+position: absolute;
+left: 80px;
+top: 20px;
 }
 
-p {
-    margin: 0;
-}
 
-.confirmation-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+td {
+  border: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
-:host ::ng-deep .p-dialog .p-button {
-    min-width: 6rem;
+#userIcon {
+  position: absolute;
+right: 20px;
+top: 40px;;
+}
+.folder {
+  position: relative;
+  margin: 10px;
+  margin-top: 20px;
+  background:#6d9fe6;
+    padding:10px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+.fline:hover {
+  background-color: rgb(226, 218, 218);
+  border-radius: 4%;
+  color:  #3184FC;
+}
+.fa-chevron-right {
+position: absolute;
+right: 25px;
+margin-top: 30px;
+}
+.fline {
+  padding:3px;
 }
