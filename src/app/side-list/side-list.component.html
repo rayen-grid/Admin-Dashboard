@@ -1,4 +1,8 @@
-<div *ngIf="isVisible == 'yes'" class="flex-container">
+
+<div  class="flex-container">
+  <div *ngIf="display"><app-table-item></app-table-item></div>
+
+  </div>
   <span class="tri"><i class="fa fa-sort"></i>&nbsp;  Tri</span>
   <mat-radio-group name="date">
     <mat-radio-button value="date-des">Date <i class="fa fa-sort-down"></i></mat-radio-button>

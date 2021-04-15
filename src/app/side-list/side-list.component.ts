@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-list.component.css']
 })
 export class SideListComponent implements OnInit {
-
+  
   constructor() { }
-isVisible : string;
   ngOnInit(): void {
-    this.isVisible = localStorage.getItem("isVisible")
   }
   
 

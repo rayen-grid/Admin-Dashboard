@@ -10,8 +10,11 @@ import { Product } from './product';
 export class TableComponent implements OnInit {
   products: Product[];
   
- isVisible : string = "no";
-
+  display = false;
+  public onPress() {
+    this.display = true;
+   
+  }
 
  @Output() showPanel = new EventEmitter();
 
