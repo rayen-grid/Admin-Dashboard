@@ -1,8 +1,8 @@
 
-<div class="tab"> 
+<div [style] = "" class="tab"> 
 <!-- search bar --> 
 
-<p-table #tablesearch [value]="products"[globalFilterFields]="['name']" [paginator]="true" [rows]="8" pagelinks="3">
+<p-table #tablesearch [value]="products"[globalFilterFields]="['name']" [paginator]="true" [rows]="4" pagelinks="3">
     
     <ng-template pTemplate="caption">
         <div class="p-d-flex">
@@ -14,7 +14,8 @@ Dossiers</b></h4>
                 <i class="pi pi-search fa-fw" style="color: white;"></i>
                 <input pInputText type="text"
                  (input)="tablesearch.filterGlobal($event.target.value, 'contains')" placeholder="Recherche"
-                  id="search-box"/>
+                  id="search-box" onclick="this.placeholder = ''"
+                  onblur="this.placeholder = 'Recherche'"/>
             </span>
         </div>
     </ng-template> 
@@ -35,17 +36,20 @@ Dossiers</b></h4>
             <th></th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
-        <tr (click)="onPress()" class="tableRow">
+    <ng-template pTemplate="body" let-productsPrime>
+        <tr (click)="sharedService.onPress()" class="tableRow">
             <td><p-avatar image="assets/user.png" shape="circle" id="client-img">
-            </p-avatar>        {{product.name}}</td>
-            <td>{{product.id}}</td>
-            <td>{{product.date_sin}}</td>
-            <td>{{product.num_dossier}}</td>
-            <td style="white-space: nowrap;">
-                {{product.etat_dossier}}</td>
+            </p-avatar>        {{productsPrime.name}}</td>
+            <td>{{productsPrime.id}}</td>
+            <td>{{productsPrime.date_sin}}</td>
+            <td>{{productsPrime.num_dossier}}</td>
+            <td>
+                {{productsPrime.etat_dossier}}</td>
 <td><img src="../../assets/Icon Button.svg"></td>
         </tr>
     </ng-template>
 </p-table>
 </div>
+<app-side-list (clickeDateAsc) ="filterAsc($event)" (clickAttente)="filterAttenteDeConfirmation($event)"  (clickDateDes) ="filterDes($event)">
+
+</app-side-list>

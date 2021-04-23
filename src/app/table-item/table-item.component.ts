@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 
 
@@ -19,9 +20,11 @@ export class TableItemComponent implements OnInit {
 
  
   
-  constructor() { }
+  constructor(public sharedService : SharedService) { }
 
   ngOnInit(): void {
+    console.log(this.sharedService.display);
+    
   }
 
 }

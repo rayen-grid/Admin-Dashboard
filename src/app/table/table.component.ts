@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductService } from './productservice.service';
 import { Product } from './product';
+import {SharedService} from '../shared.service'
 
 @Component({
   selector: 'app-table',
@@ -8,29 +9,36 @@ import { Product } from './product';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  products: Product[];
+  products: Product[] = [];
+  productsPrime : Product[] = [];
+
+
+  constructor(private productService: ProductService, public sharedService : SharedService) { }
   
-  display = false;
-  public onPress() {
-    this.display = true;
-   
+  onItemClick() {
+    this.sharedService.onPress();
   }
 
- @Output() showPanel = new EventEmitter();
-
-
-  getUserData() {
-    localStorage.setItem("isVisible", "yes");
-    console.log("hello");  
-    this.showPanel.emit();
+   ngOnInit() {
+      this.productService.getProductsSmall().then(data => this.products = data)
+      this.productsPrime =  [...this.products];
   }
 
-  constructor(private productService: ProductService) { }
+filterAsc(e) {
+  this.products = this.sharedService.filterDateAsc(this.products)
+  
+}
+filterDes(e) {
+  this.products = this.sharedService.filterDateDes(this.products)
+  
+}
 
-  ngOnInit(): void {
-    this.productService.getProductsSmall().then(data => this.products = data);
-
-  }
+filterAttenteDeConfirmation(e) {
+  // this.productsPrime = this.products;
+  this.productsPrime = this.sharedService.filterAttente(this.products)
+  console.log(this.productsPrime);
+  
+}
 
 
 }
