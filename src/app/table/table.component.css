@@ -51,15 +51,18 @@ tr > td {
 } */
 td > * {
     vertical-align : middle;
+    
 }
 tr {
     white-space: nowrap;
     font-size: 14px;
+    
 }
 
 tr > th {
     background-color: white;
     font-weight: bold;
+    font-size: 12px;
 }
 #folderImg {
     border: 2px solid;

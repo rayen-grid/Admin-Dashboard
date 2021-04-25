@@ -14,10 +14,42 @@
   </mat-radio-group>
 
   <span class="filtre"><i class="fa fa-filter"></i>&nbsp;  Filtre</span>
+  <h6 id="titleEtat">Etat du dossier</h6>
   <mat-radio-group name="filter" class="etat-bottom">
     <mat-radio-button (click)='onFilterAttente()' value="attente">En attente de confirmation</mat-radio-button>
-    <mat-radio-button value="traitement">En cours de traitement</mat-radio-button>
-    <mat-radio-button value="validé">Validé</mat-radio-button>
+    <mat-radio-button (click)= 'onFilterTraitement()' value="traitement">En cours de traitement</mat-radio-button>
+    <mat-radio-button  (click)= 'onFilterValideee()' value="validé">Validé</mat-radio-button>
 
   </mat-radio-group>
+  <div class="companie">
+    <h6 id="titleCompanie">Companie d'assurance</h6>
+  <div class="p-field-checkbox">
+      <p-checkbox name="group1" value="GAT" ></p-checkbox>
+      <label>  GAT</label>
+  </div>
+  <div class="p-field-checkbox">
+      <p-checkbox name="group1" value ="COMAR"></p-checkbox>
+      <label>COMAR</label>
+  </div>
+  <div class="p-field-checkbox">
+      <p-checkbox name="group1" value="AMI"></p-checkbox>
+      <label >AMI</label>
+  </div>
+  <div class="p-field-checkbox">
+      <p-checkbox name="group1" value="CARTE"></p-checkbox>
+      <label>CARTE</label>
+  </div>
+  <div class="p-field-checkbox">
+    <p-checkbox name="group1" value="STAR"></p-checkbox>
+    <label >STAR</label>
+</div>
+<div class="p-field-checkbox">
+  <p-checkbox name="group1" value="BIAT"></p-checkbox>
+  <label>BIAT</label>
+</div>
+  
+</div>
+<div class="bottomButton">
+<button pButton pRipple type="button" label="Réinitialiser" class="p-button-raised"></button>
+</div>
 </div>

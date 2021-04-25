@@ -34,11 +34,28 @@ filterDes(e) {
 }
 
 filterAttenteDeConfirmation(e) {
-  // this.productsPrime = this.products;
-  this.productsPrime = this.sharedService.filterAttente(this.products)
+  this.productsPrime = this.products;
+  this.products = this.sharedService.filterAttente(this.products)
   console.log(this.productsPrime);
   
 }
+
+
+filterEnCoursTraitement(e) {
+  this.productsPrime = this.products;
+  this.products = this.sharedService.filterTraitement(this.products)
+  console.log(this.products);
+  
+}
+
+
+filterValidee(e) {
+  this.productsPrime = this.products;
+  this.products = this.sharedService.filterValide(this.products)
+  console.log(this.products);
+  
+}
+
 
 
 }

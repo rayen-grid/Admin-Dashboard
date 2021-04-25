@@ -10,7 +10,7 @@ export interface Product {
     // image?:string;
     // rating?:number;
     name?:string;
-    id?:string;
+    companie?:string;
     date_sin?:string;
      num_dossier?:number;
     etat_dossier?:string;

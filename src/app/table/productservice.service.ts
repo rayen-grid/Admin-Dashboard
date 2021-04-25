@@ -36,7 +36,7 @@ getProductsWithOrdersSmall() {
 
 generatePrduct(): any {
     const product: Product =  {
-        id: this.generateId(),
+        companie: this.generateId(),
         name: this.generateName(),
         // description: "Product Description",
         num_dossier: this.generateNumdossier(),

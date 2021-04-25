@@ -38,6 +38,9 @@ import { ToastModule } from 'primeng/toast';
 import {MatRadioModule} from '@angular/material/radio';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {CheckboxModule} from 'primeng/checkbox';
+
+
 
 
 
@@ -80,7 +83,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ButtonModule,
     DynamicDialogModule,
     ToastModule,
-    MatRadioModule
+    MatRadioModule,
+    CheckboxModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

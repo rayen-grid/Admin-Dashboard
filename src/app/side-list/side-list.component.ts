@@ -10,6 +10,8 @@ export class SideListComponent implements OnInit {
   @Output() clickeDateAsc = new EventEmitter;
   @Output() clickDateDes = new EventEmitter;
   @Output() clickAttente = new EventEmitter;
+  @Output() clickTraitement = new EventEmitter;
+  @Output() clickValide = new EventEmitter;
 
   constructor(public sharedService : SharedService) { }
   ngOnInit(): void {
@@ -26,4 +28,11 @@ export class SideListComponent implements OnInit {
       this.clickAttente.emit();
     }  
 
+    onFilterTraitement() {
+      this.clickTraitement.emit();
+    }
+
+    onFilterValideee() {
+      this.clickValide.emit();
+    }
 }

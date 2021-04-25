@@ -4,8 +4,12 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
+  
   @Output() showPanel = new EventEmitter();
+
+
  display : boolean = false;
+
   public onPress() {
     this.display = !this.display;
     console.log(this.display);
@@ -29,6 +33,19 @@ export class SharedService {
    return products.filter(el => {
      return el.etat_dossier === "En attente de confirmation"})
    }
+
+
+
+   public filterTraitement (products) {
+    return products.filter(el => {
+      return el.etat_dossier === "En cours de traitement"})
+    }
+
+    public filterValide (products) {
+      return products.filter(el => {
+        return el.etat_dossier === "Validé"})
+      }
+
 
   public convert(str) {
     let dateObj = {
