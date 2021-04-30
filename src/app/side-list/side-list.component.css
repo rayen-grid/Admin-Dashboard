@@ -16,9 +16,11 @@
       border-style: solid;
       border-color: white;
       border-top-left-radius: 25px;
-      margin-top: 40px;
+      margin-top: -30px;
       color: white;
       font-size: 13px;
+      
+      
     }
     mat-radio-group {
         margin-top: 60px;
@@ -88,7 +90,7 @@
     height: 35px;
 
 }
-.p-checkbox{
+p-field-checkbox{
     border: 2px solid #ced4da;
     background: #ffffff;
     width: 20px;
@@ -96,4 +98,18 @@
     color: #495057;
     border-radius: 50%;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* override primeng class*/
+  ::ng-deep .p-checkbox .p-checkbox-box{
+
+    width: 13px;    
+    height: 13px;
+    border: 1px solid #6d757a;
+    border-radius: 50%;
+}
+
+.pi-sort-amount-down, .pi-sort-amount-up {
+margin-left: 10px;
+font-size: 0.8rem;
 }

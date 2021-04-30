@@ -2,26 +2,30 @@
 <div  *ngIf='!sharedService.display' class="flex-container">
   <div *ngIf="sharedService.display"><app-table-item></app-table-item></div>
 
-  <span class="tri"><i class="fa fa-sort"></i>&nbsp;  Tri</span>
+  <span class="tri"><i class="pi pi-sort-alt"></i>&nbsp;  Tri</span>
   <mat-radio-group name="date">
-    <mat-radio-button value="date-des" (click) ="onFilterClickAsc()">Date <i class="fa fa-sort-down"></i></mat-radio-button>
-    <mat-radio-button value="date-asc" (click) ="onFilterClickDes()">Date <i class="fa fa-sort-up"></i></mat-radio-button>
+    <mat-radio-button value="date-des" (click) ="onFilterClickAsc()">Date <i class="pi pi-sort-amount-down"></i>
+    </mat-radio-button>
+    <mat-radio-button value="date-asc" (click) ="onFilterClickDes()">Date <i class="pi pi-sort-amount-up"></i>
+    </mat-radio-button>
   </mat-radio-group>
 
-  <mat-radio-group name="etat" class="etats">
-    <mat-radio-button value="etat-des">Etat du dossier <i class="fa fa-sort-down"></i></mat-radio-button>
-    <mat-radio-button value="etat-asc">Etat du dossier <i class="fa fa-sort-up"></i></mat-radio-button>
+  <mat-radio-group name="etat" class="etats" >
+    <mat-radio-button (click)='onFilterClickEtatDes()' value="etat-des">Etat du dossier <i class="pi pi-sort-amount-down"></i>
+    </mat-radio-button>
+    <mat-radio-button (click)='onFilterClickEtatAsc()' value="etat-asc">Etat du dossier <i class="pi pi-sort-amount-up"></i>
+    </mat-radio-button>
   </mat-radio-group>
 
   <span class="filtre"><i class="fa fa-filter"></i>&nbsp;  Filtre</span>
   <h6 id="titleEtat">Etat du dossier</h6>
-  <mat-radio-group name="filter" class="etat-bottom">
-    <mat-radio-button (click)='onFilterAttente()' value="attente">En attente de confirmation</mat-radio-button>
-    <mat-radio-button (click)= 'onFilterTraitement()' value="traitement">En cours de traitement</mat-radio-button>
-    <mat-radio-button  (click)= 'onFilterValideee()' value="validé">Validé</mat-radio-button>
+  <mat-radio-group name="filter" class="etat-bottom" [(ngModel)]="filter" (ngModelChange)="onChange($event)">
+    <mat-radio-button  value="attente">En attente de confirmation</mat-radio-button>
+    <mat-radio-button  value="traitement">En cours de traitement</mat-radio-button>
+    <mat-radio-button  value="validé">Validé</mat-radio-button>
 
   </mat-radio-group>
-  <div class="companie">
+  <div class="companie" >
     <h6 id="titleCompanie">Companie d'assurance</h6>
   <div class="p-field-checkbox">
       <p-checkbox name="group1" value="GAT" ></p-checkbox>

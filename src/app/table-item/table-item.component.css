@@ -1,15 +1,16 @@
 
 .flex-container {
   background-color: #3184FC;
-  position: absolute;
-  right: 10px;
-  height: 100% ;
-  width: 23%;
-  border-style: 0;
-  border-color: white;
-  border-top-left-radius: 25px;
-  margin-top: 40px;
-  color: white;
+      position: absolute;
+      right: 10px;
+      height: 100%;
+      width: 23%;
+      border-style: solid;
+      border-color: white;
+      border-top-left-radius: 25px;
+      margin-top: -30px;
+      color: white;
+      font-size: 13px;
 }
 table {
   color:white;
@@ -39,7 +40,7 @@ td {
 }
 #userIcon {
   position: absolute;
-right: 20px;
+right: 23px;
 top: 40px;;
 }
 .folder {
@@ -48,8 +49,10 @@ top: 40px;;
   margin-top: 20px;
   background:#6d9fe6;
     padding:10px;
-    border-radius: 40%;
+    border-radius: 20%;
     cursor: pointer;
+    height: 40px;
+    width: 40px;
 }
 .fline:hover {
   background-color: rgb(226, 218, 218);

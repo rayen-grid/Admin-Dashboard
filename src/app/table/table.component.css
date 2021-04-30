@@ -1,8 +1,8 @@
 .tab {
-    width: 60%;
+    width: 65%;
     position:absolute;
     margin-left: 10%;
-    margin-top:10%;
+    margin-top: 7.5%;
 }
 
 .tableRow {
@@ -37,6 +37,7 @@ tr > td {
     line-height: 10px; 
     font-size: 11px;
     font-weight: 500;
+    border: 1px white;
 }
 ::placeholder {
     color: white;
@@ -56,6 +57,7 @@ td > * {
 tr {
     white-space: nowrap;
     font-size: 14px;
+    border: 1px solid white;
     
 }
 
@@ -63,17 +65,24 @@ tr > th {
     background-color: white;
     font-weight: bold;
     font-size: 12px;
+    text-align:center;
+    border: 1px solid white;
+ 
 }
 #folderImg {
     border: 2px solid;
     width: 25px;
     border-radius: 10%;
 }
-tr:hover {
+.tableRow:hover {
     background-color:rgb(191, 229, 247);
     color: rgb(43, 169, 201);
-    box-shadow:  inset 0 -2px 0 0 rgb(43, 169, 201); ;
+    box-shadow:  inset 0 -2px 0 0 rgb(43, 169, 201); 
+    
 }
 input {
     text-align:center;
+}
+#client-img {
+margin-right: 10px;
 }

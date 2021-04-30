@@ -9,14 +9,22 @@ import { SharedService } from '../shared.service';
 export class SideListComponent implements OnInit {
   @Output() clickeDateAsc = new EventEmitter;
   @Output() clickDateDes = new EventEmitter;
-  @Output() clickAttente = new EventEmitter;
-  @Output() clickTraitement = new EventEmitter;
-  @Output() clickValide = new EventEmitter;
+  // @Output() clickAttente = new EventEmitter;
+  // @Output() clickTraitement = new EventEmitter;
+  // @Output() clickValide = new EventEmitter;
+  @Output() clickEtatDes = new EventEmitter;
+  @Output() clickEtatAsc = new EventEmitter;
+  @Output() clickfilter = new EventEmitter();
+  filter;
 
   constructor(public sharedService : SharedService) { }
   ngOnInit(): void {
+
   }
-  
+  onChange(){
+    this.clickfilter.emit(this.filter);
+  }
+
   onFilterClickAsc() {
   this.clickeDateAsc.emit();
   }
@@ -24,15 +32,22 @@ export class SideListComponent implements OnInit {
     this.clickDateDes.emit();
     }
   
-    onFilterAttente() {
-      this.clickAttente.emit();
-    }  
+    // onFilterAttente() {
+    //   this.clickAttente.emit();
+    // }  
 
-    onFilterTraitement() {
-      this.clickTraitement.emit();
+    // onFilterTraitement() {
+    //   this.clickTraitement.emit();
+    // }
+
+    // onFilterValideee() {
+    //   this.clickValide.emit();
+    // }
+    onFilterClickEtatDes() {
+      this.clickEtatDes.emit()
     }
 
-    onFilterValideee() {
-      this.clickValide.emit();
+    onFilterClickEtatAsc() {
+      this.clickEtatAsc.emit()
     }
 }

@@ -29,11 +29,21 @@ export class SharedService {
     return products =  products.sort((a, b) =>(this.convert(a.date_sin) > this.convert(b.date_sin) ? -1 : 1))
      
    }
-   public filterAttente (products) {
-   return products.filter(el => {
-     return el.etat_dossier === "En attente de confirmation"})
+
+   public filterEtatDes(products) : any {
+   return products = products.sort((a, b) =>(a.etat_dossier.length > b.etat_dossier.length ? 1 : 
+    a.etat_dossier.length < b.etat_dossier.length ? -1 : 0))
    }
 
+   public filterEtatAsc(products) : any {
+    return products = products.sort((a, b) =>(a.etat_dossier.length > b.etat_dossier.length ? -1 : 
+     a.etat_dossier.length < b.etat_dossier.length ? 1 : 0))
+    }
+
+   public filterAttente (products) {
+    return products.filter(el => {
+     return el.etat_dossier === "En attente de confirmation"})
+   }
 
 
    public filterTraitement (products) {
@@ -45,7 +55,6 @@ export class SharedService {
       return products.filter(el => {
         return el.etat_dossier === "Validé"})
       }
-
 
   public convert(str) {
     let dateObj = {

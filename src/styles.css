@@ -6,10 +6,13 @@ html, body {
 }
 
 body {
- margin: 0;
+ /* margin: 0; */
 font-family: Roboto, "Helvetica Neue", sans-serif;
 /* overflow: hidden; */
- height: 50%;
+ height: 100%;
+ padding-bottom: 20px;
+
+ 
 }
 /* html {
     overflow: scroll;
@@ -18,3 +21,4 @@ font-family: Roboto, "Helvetica Neue", sans-serif;
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
+
