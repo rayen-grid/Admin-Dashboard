@@ -15,14 +15,21 @@ export class SideListComponent implements OnInit {
   @Output() clickEtatDes = new EventEmitter;
   @Output() clickEtatAsc = new EventEmitter;
   @Output() clickfilter = new EventEmitter();
-  filter;
+  @Output() clickfilterCompany = new EventEmitter();
 
+  filter;
+  // filterCompany = { GAT: true, COMAR: true, AMI: true, CARTE: true, STAR: true, BIAT: true };
+ filterCompany;
+ 
   constructor(public sharedService : SharedService) { }
   ngOnInit(): void {
 
   }
   onChange(){
     this.clickfilter.emit(this.filter);
+  }
+  onChangeCompany(){
+    this.clickfilterCompany.emit(this.filterCompany);
   }
 
   onFilterClickAsc() {

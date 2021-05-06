@@ -59,6 +59,23 @@ this.productsPrime=this.products.filter(el=>{
 console.log(this.productsPrime,)
 }
 
+filterChangeCompany(e) {
+  this.productsPrime=this.products.filter(el=>{
+    if(e==="GAT") 
+      return el.companie==="GAT"                              
+     else if(e==="COMAR")
+      return el.companie==="COMAR"
+     else if(e==="CARTE")
+      return el.companie==="CARTE"
+     else if(e==="AMI")
+       return el.companie==="AMI"
+     else if(e==="BIAT")
+       return el.companie==="BIAT"
+    else return el.companie==="STAR"
+  
+  })
+  console.log(this.productsPrime)
+  }
 
 
 // filterAttenteDeConfirmation(e) {

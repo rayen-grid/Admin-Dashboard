@@ -38,38 +38,38 @@
 			"etat_dossier": "Validé"
 		},
 		{
-			"name": "General Kenobi",
+			"name": "Jane Sorrow",
 			"companie": "GAT",
-			"date_sin": "Oct 2, 2019",
+			"date_sin": "Mar 2, 2019",
 			"num_dossier": "3222",
 			"etat_dossier": "En cours de traitement"
 		},
 		{
 	
-			"name": "Saul Goodman",
+			"name": "Emily Freckles",
 			"companie": "STAR",
 			"date_sin": "Oct 8, 2020",
 			"num_dossier": "2822",
-			"etat_dossier": "En attente de confirmation"
+			"etat_dossier": "En cours de traitement"
 		},
 		{
-			"name": "Frank Ocean",
+			"name": "Vadim Soroz",
 			"companie": "BIAT",
 			"date_sin": "Jan 2, 2019",
 			"num_dossier": "2822",
-			"etat_dossier": "En attente de confirmation"
+			"etat_dossier": "Validé"
 		},
 		{
-			"name": "Jimmy Bricks",
+			"name": "Kate Sandpaper",
 			"companie": "STAR",
-			"date_sin": "Jan 4, 2019",
+			"date_sin": "Apr 4, 2019",
 			"num_dossier": "2822",
 			"etat_dossier": "En attente de confirmation"
 		},
         {
-			"name": "Tommy Wiseau",
+			"name": "Jade Kingstone",
 			"companie": "AMI",
-			"date_sin": "Feb 2, 2019",
+			"date_sin": "Jan 2, 2019",
 			"num_dossier": "2292",
 			"etat_dossier": "Validé"
 		}

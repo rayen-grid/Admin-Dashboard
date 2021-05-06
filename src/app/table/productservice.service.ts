@@ -38,14 +38,11 @@ generatePrduct(): any {
     const product: Product =  {
         companie: this.generateId(),
         name: this.generateName(),
-        // description: "Product Description",
         num_dossier: this.generateNumdossier(),
-        // category: "Product Category",
         etat_dossier: this.generateEtatdoss(),
     };
 
-    // product.image = product.name.toLocaleLowerCase().split(/[ ,]+/).join('-')+".jpg";;
-    // return product;
+    
 }
 
 
@@ -69,11 +66,11 @@ generateDatesin() {
     return Math.floor(Math.random() * Math.floor(299)+1);
 }
 
-generateNumdossier() {
+public generateNumdossier() {
     return Math.floor(Math.random() * Math.floor(75)+1);
 }
 
-generateEtatdoss() {
+public generateEtatdoss() {
     return this.etat[Math.floor(Math.random() * Math.floor(3))];
 }
 

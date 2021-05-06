@@ -28,27 +28,37 @@
   <div class="companie" >
     <h6 id="titleCompanie">Companie d'assurance</h6>
   <div class="p-field-checkbox">
-      <p-checkbox name="group1" value="GAT" ></p-checkbox>
-      <label>  GAT</label>
+      <p-checkbox name="group1" value="GAT" [(ngModel)]="filterCompany"
+       (ngModelChange)="onChangeCompany($event)" ></p-checkbox>
+      <label>GAT</label>
   </div>
   <div class="p-field-checkbox">
-      <p-checkbox name="group1" value ="COMAR"></p-checkbox>
+      <p-checkbox name="group1" value ="COMAR" [(ngModel)]="filterCompany"
+      (ngModelChange)="onChangeCompany($event)"></p-checkbox>
       <label>COMAR</label>
   </div>
   <div class="p-field-checkbox">
-      <p-checkbox name="group1" value="AMI"></p-checkbox>
+      <p-checkbox name="group1" value="AMI" [(ngModel)]="filterCompany"
+      (ngModelChange)="onChangeCompany($event)"
+      ></p-checkbox>
       <label >AMI</label>
   </div>
   <div class="p-field-checkbox">
-      <p-checkbox name="group1" value="CARTE"></p-checkbox>
+      <p-checkbox name="group1" value="CARTE" [(ngModel)]="filterCompany"
+      (ngModelChange)="onChangeCompany($event)"
+      ></p-checkbox>
       <label>CARTE</label>
   </div>
   <div class="p-field-checkbox">
-    <p-checkbox name="group1" value="STAR"></p-checkbox>
+    <p-checkbox name="group1" value="STAR" [(ngModel)]="filterCompany"
+    (ngModelChange)="onChangeCompany($event)"
+    ></p-checkbox>
     <label >STAR</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox name="group1" value="BIAT"></p-checkbox>
+  <p-checkbox name="group1" value="BIAT" [(ngModel)]="filterCompany"
+       (ngModelChange)="onChangeCompany($event)"
+  ></p-checkbox>
   <label>BIAT</label>
 </div>
   

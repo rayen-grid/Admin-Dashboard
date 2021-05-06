@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { ProductService } from '../table/productservice.service';
+import { Product } from '../table/product';
 
 
 
@@ -17,14 +19,22 @@ export class TableItemComponent implements OnInit {
   ];
   headElements = ['sdqt'];
 
-
+  products: Product[] = [];
+  productsPrime : any = [];
  
   
-  constructor(public sharedService : SharedService) { }
+  constructor(public productService: ProductService, public sharedService : SharedService) { }
 
   ngOnInit(): void {
     console.log(this.sharedService.display);
-    
+   
+      this.productService.getProductsSmall().then(data => {
+        this.products = data
+        this.productsPrime =  this.products;
+      console.log(this.productsPrime,this.products)
+      })
+      
+  
   }
 
 }

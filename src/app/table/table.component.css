@@ -2,7 +2,7 @@
     width: 65%;
     position:absolute;
     margin-left: 10%;
-    margin-top: 7.5%;
+    margin-top: 3%;
 }
 
 .tableRow {
@@ -15,11 +15,12 @@ h4 {
 background-image: linear-gradient(to right, rgb(246, 253, 252), rgb(246, 248, 247)); 
 color: #3184FC;
 font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 18px;
 }
 .p-input-icon-left,
 .p-input-icon-right {
     float: right;
-    bottom: 40px;
+    bottom: 38px;
   
 
 }
@@ -35,14 +36,16 @@ span.p-input-icon-left input[type="text"] {
 tr > td {
     text-align:center;
     line-height: 10px; 
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 600;
     border: 1px white;
+    padding: 2px;
 }
 ::placeholder {
     color: white;
     opacity: 1;
     text-indent: 6px;
+    font-size: 15px;
 }
 #search-box:focus{
     outline:none;
@@ -84,5 +87,18 @@ input {
     text-align:center;
 }
 #client-img {
-margin-right: 10px;
+margin: 30px;
+}
+
+::ng-deep.p-datatable .p-datatable-header {
+    padding: 0rem;
+    border: unset;
+}
+
+.Phoneimg {
+    width: 28px;
+}
+.Phoneimg:hover {
+    border: 2px solid rgb(202, 23, 23);
+    border-radius: 50%;
 }

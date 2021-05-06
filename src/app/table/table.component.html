@@ -3,9 +3,9 @@
 <!-- search bar --> 
 
 <p-table #tablesearch [value]="productsPrime"[globalFilterFields]="['name']"
- [paginator]="true" [rows]="4" pagelinks="3"  >
+ [paginator]="true" [rows]="9" pagelinks="10">
     
-    <ng-template pTemplate="caption">
+    <ng-template pTemplate="caption" >
         <div class="p-d-flex">
         <h4 ><img src="../../assets/clipboard.svg" id="folderImg"><b>
 Dossiers</b></h4>
@@ -46,13 +46,13 @@ Dossiers</b></h4>
             <td>{{productsPrime.date_sin}}</td>
             <td>{{productsPrime.num_dossier}}</td>
             <td>{{productsPrime.etat_dossier}}</td>
-<td><img src="../../assets/Icon Button.svg"></td>
+<td><img src="../../assets/Icon Button.svg" class="Phoneimg" ></td>
         </tr>
     </ng-template>
 </p-table>
 </div>
 <app-side-list (clickeDateAsc) ="filterAsc($event)"   (clickDateDes) ="filterDes($event)" 
- (clickEtatDes)="filterEtaDes($event)" 
+ (clickEtatDes)="filterEtaDes($event)" (clickfilterCompany)="filterChangeCompany($event)"
  (clickEtatAsc)="filterEtaAsc($event)" (clickfilter)="filterChange($event)">
 
 </app-side-list>
